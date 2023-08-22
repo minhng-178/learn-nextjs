@@ -1,23 +1,10 @@
-import Link from 'next/link';
-import x from '@/styles/app.module.css';
-import y from '@/styles/test.module.css';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Home Page',
+  description: 'HOP NEVER DIE',
+};
 
 export default function Home() {
-  return (
-    <div>
-      <ul>
-        <li className={x['red']}>
-          <Link href={'/facebook'}>
-            <span className={y['red']}>Facebook</span>
-          </Link>
-        </li>
-        <li>
-          <a href="/youtube">You tube</a>
-        </li>
-        <li>
-          <a href="/tiktok">Tiktok</a>
-        </li>
-      </ul>
-    </div>
-  );
+  return <div>Home Page</div>;
 }
