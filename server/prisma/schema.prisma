@@ -18,3 +18,16 @@ model User {
   updatedAt DateTime @updatedAt
   username  String   @unique
 }
+
+model Product {
+  colors        Json
+  createdAt     DateTime @default(now())
+  description   Json
+  discountPrice Float
+  id            String   @id @default(cuid())
+  images        Json
+  title         String
+  titlePrice    Float
+  updatedAt     DateTime @updatedAt
+  variants      Json
+}
